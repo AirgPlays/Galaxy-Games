@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Galaxy Games</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0a0a2a, #1a0033);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Floating Circles Background */
+    .areagames {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .circles li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 102, 255, 0.2);
+      animation: move 25s linear infinite;
+      bottom: -150px;
+      border-radius: 50%;
+    }
+    .circles li:nth-child(1){ left: 10%; width: 30px; height: 30px; animation-duration: 20s;}
+    .circles li:nth-child(2){ left: 20%; width: 15px; height: 15px; animation-duration: 25s;}
+    .circles li:nth-child(3){ left: 25%; width: 25px; height: 25px; animation-duration: 22s;}
+    .circles li:nth-child(4){ left: 40%; width: 20px; height: 20px; animation-duration: 27s;}
+    .circles li:nth-child(5){ left: 55%; width: 35px; height: 35px; animation-duration: 30s;}
+    .circles li:nth-child(6){ left: 65%; width: 15px; height: 15px; animation-duration: 28s;}
+    .circles li:nth-child(7){ left: 70%; width: 20px; height: 20px; animation-duration: 24s;}
+    .circles li:nth-child(8){ left: 85%; width: 25px; height: 25px; animation-duration: 26s;}
+    .circles li:nth-child(9){ left: 90%; width: 30px; height: 30px; animation-duration: 23s;}
+
+    @keyframes move {
+      0% { transform: translateY(0) rotate(0deg);}
+      100% { transform: translateY(-1200px) rotate(720deg);}
+    }
+
+    /* Back Button */
+    .gamesbackbutton {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+    }
+    .gamesbackbutton .button {
+      background: #3a00a0;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .gamesbackbutton .button:hover {
+      background: #ff66ff;
+    }
+
+    /* Game iframe */
+    #gameFrame {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85%;
+      height: 75%;
+      border: 2vw solid black;
+      border-radius: 1vw;
+      display: none; /* hidden until play */
+      z-index: 1;
+    }
+
+    /* Startup Modal */
+    #startupModal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      text-align: center;
+    }
+    #startupModal h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #ff66ff;
+    }
+    #startupModal button {
+      background: #3a00a0;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #startupModal button:hover {
+      background: #ff66ff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating circles -->
+  <div class="areagames">
+    <ul class="circles">
+      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    </ul>
+  </div>
+
+  <!-- Back Button -->
+  <div class="gamesbackbutton">
+    <button onclick="location.href='main.html'">Back</button>
+  </div>
+
+  <!-- Game iframe -->
+  <iframe id="gameFrame" scrolling="no" frameborder="0" src="web/bloons-tower-defense-1-main/index.html"></iframe>
+
+  <!-- Startup Modal -->
+  <div id="startupModal">
+    <h2>Bloons Tower Defense 1</h2>
+    <p>Choose how to play:</p>
+    <div>
+      <button id="playBtn">Play</button>
+      <button id="fullscreenBtn">Fullscreen</button>
+    </div>
+  </div>
+
+<script>
+  const modal = document.getElementById('startupModal');
+  const iframe = document.getElementById('gameFrame');
+  const playBtn = document.getElementById('playBtn');
+  const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+  // Play button opens game in iframe
+  playBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    iframe.style.display = 'block';
+  });
+
+  // Fullscreen button opens game in new tab
+  fullscreenBtn.addEventListener('click', () => {
+    window.open(iframe.src, '_blank');
+  });
+
+  // Optional: Redirect CTRL + / to Schoology
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === '/') {
+      window.location.href = 'https://ccisd.schoology.com';
+    }
+  });
+</script>
+</body>
+</html>

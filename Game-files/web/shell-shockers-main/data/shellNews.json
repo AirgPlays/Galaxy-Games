@@ -1,0 +1,66 @@
+[
+	{
+		"content": "Get geared up for a big year! The Racer Update out now with an epic new permanent weapon set! 🏎️💨",
+		"imageExt": ".png",
+		"id": "news_lrfj5gaj0",
+		"elId": "K8GWhB",
+		"active": true,
+		"linksToChangeLog": "1"
+	},
+	{
+		"active": true,
+		"content": "Take a Shellfie! 📸 Have you tried the new Shell Shockers Photo Booth? Download & share your loadouts now!",
+		"imageExt": ".png",
+		"id": "news_ljx0eqm53",
+		"elId": "4Liyel",
+		"linksToPhotoBooth": "1"
+	},
+	{
+		"content": "SoccerBros.gg is LIVE NOW! ⚽ Lace up those cleats and PUT THE BALL IN THE NET! 🥅",
+		"link": "https://soccerbros.gg/?utm_source=ssnewsfeed&utm_medium=referral",
+		"imageExt": ".png",
+		"active": true,
+		"id": "news_lpr3d0mh7",
+		"elId": "VdGQpc"
+	},
+	{
+		"content": "🧟 It’s a zombie chicken apocalypse! Fight to survive in BadEgg.io! 💀",
+		"imageExt": ".png",
+		"id": "news_lph8gosp2",
+		"elId": "yuWQwS",
+		"link": "https://badegg.io/?utm_source=ssnewsfeed&utm_medium=referral",
+		"active": true
+	},
+	{
+		"content": "🤼 Get ready to rumble! Check out WrestleBros.io and beat up your bros! 🏆",
+		"imageExt": ".png",
+		"id": "news_lph8ivi93",
+		"elId": "CPZlvR",
+		"link": "https://wrestlebros.io/?utm_source=ssnewsfeed&utm_medium=referral",
+		"active": true
+	},
+	{
+		"content": "Play the original Bros dunkathon, BasketBros.io! 🏀 1v1 basketball action! Unlock tons of new ballers and upgrades! ⛹️⛹🏿‍♀️⛹🏽‍♂️",
+		"imageExt": ".jpg",
+		"id": "news_lph97l975",
+		"elId": "j9UZgA",
+		"link": "https://basketbros.io/?utm_source=ssnewsfeed&utm_medium=referral",
+		"active": true
+	},
+	{
+		"content": "✨ Join the prestigious Shell Shockers VIP Club.  For as little as $5 per month get 2 premium items, no ads, x2 eggs & more! 💎 ",
+		"linksToVipStore": "1",
+		"imageExt": ".png",
+		"id": "news_lph8kp3j6",
+		"elId": "9Qilc5",
+		"active": true
+	},
+	{
+		"content": "Dost thou even joust? Lance your opponents atop a flying dragon in DragonJoust.io 🐉",
+		"imageExt": ".png",
+		"id": "news_lph8lxuv4",
+		"elId": "xzMLYC",
+		"active": true,
+		"link": "https://dragonjoust.io/?utm_source=ssnewsfeed&utm_medium=referral"
+	}
+]

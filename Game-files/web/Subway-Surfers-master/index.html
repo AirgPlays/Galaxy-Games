@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WebGL Demo</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+  </head>
+
+  <body style="align-content: center;">
+    <div class="container">
+      <div class="text-left">
+          <br><button type="button" id = "coins_score" class="btn btn-primary btn-lg" >Coins: 0</button>
+          <button type="button" id = "run_score" class="btn btn-primary btn-lg" >Score: 0</button>
+      </div>
+      <div id="canvasDiv">
+      	<canvas id="glcanvas" width="800" height="700"></canvas>
+  	  </div>
+    </div>
+    <audio src = './sounds/sound.m4a' id="music" loop></audio>
+    <audio src = './sounds/coin.wav' id="coin"></audio>
+    <audio src = './sounds/crash.mp3' id = "crash"></audio>
+    <audio src = './sounds/jumpboost.mp3' id = "jump" loop></audio>
+  </body>
+  <script src="./jquery-3.3.1.min.js"></script>
+  <script src="./gl-matrix.js"></script>
+  <script src="./mousetrap.min.js"></script>
+  <script src="./utility.js"></script>
+  <script src="./cube.js"></script>
+  <script src="./buildings.js"></script>
+  <script src="./obstacle1.js"></script>
+  <script src="./obstacle2.js"></script>
+  <script src="./obstacle3.js"></script>
+  <script src="./jumping_boot.js"></script>
+  <script src="./jetpack.js"></script>
+  <script src="./bush.js"></script>
+  <script src="./coin.js"></script>
+  <script src="./player.js"></script>
+  <script src="./watchman.js"></script>
+  <script src="./main.js"></script>
+  <script src="./collision.js"></script>
+</html>
