@@ -1,0 +1,22 @@
+body.thanksgiving {
+    background: linear-gradient(#210013, #4a0d00);
+    --accent: #ff8800;
+    --accent2: #ffe2a0;
+}
+
+body.thanksgiving .game {
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 12px var(--accent2);
+}
+
+/* Leaves animation */
+.leaf {
+    position: fixed;
+    top: -10px;
+    animation: fall 14s linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-80px) translateY(110vh); }
+}

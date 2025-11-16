@@ -1,0 +1,24 @@
+body.valentines {
+    background: linear-gradient(#2a0030, #3a0055);
+    --accent: #ff66c4;
+    --accent2: #ff99dd;
+}
+
+body.valentines .game {
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 15px var(--accent2);
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: 0;
+    animation: rise 6s linear infinite;
+    font-size: 14px;
+    color: #ff66c4;
+}
+
+@keyframes rise {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-120vh); }
+}

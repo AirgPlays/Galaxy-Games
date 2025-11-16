@@ -1,0 +1,49 @@
+/* Theme Override Container */
+.theme-box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(25, 0, 50, 0.85);
+    padding: 18px 25px;
+    border-radius: 14px;
+    box-shadow: 0 0 20px #9b4dff;
+    backdrop-filter: blur(8px);
+    color: rgb(255, 255, 255);
+    font-family: Orbitron, sans-serif;
+    z-index: 9999;
+}
+
+/* Title */
+.theme-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ff66ff;
+    text-shadow: 0 0 8px #7a2cff;
+}
+
+/* Buttons */
+.theme-btn {
+    padding: 6px 12px;
+    background: #120026;
+    color: #ffffff;
+    border: 1px solid #7c1cff;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 4px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    box-shadow: 0 0 12px #ff4df8;
+    transform: translateY(-2px);
+    background: #2a004f;
+}
+
+.theme-toggle img {
+  width: 28px;
+  height: 28px;
+  background: none;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 6px #ff66ff) brightness(1.5);
+}

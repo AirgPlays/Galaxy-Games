@@ -1,0 +1,10 @@
+body.easter {
+    background:  url('/Images/themes/easter.webp') center/cover no-repeat, linear-gradient(#240050, #3d0080);
+    --accent: #b6ffea;
+    --accent2: #ffc4fa;
+}
+
+body.easter .game {
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 12px var(--accent2);
+}

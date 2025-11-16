@@ -1,0 +1,48 @@
+body.christmas {
+    background: 
+        url('/Images/themes/christmas.webp') center/cover no-repeat,
+        linear-gradient(#07041a, #18002a);
+    color: #fff;
+
+    /* Unified Accent Colors */
+    --accent: #2fe0a8;      /* Mint glow */
+    --accent2: #ff3b5a;     /* Soft red */
+}
+
+
+body.christmas .game,
+body.christmas header,
+body.christmas footer {
+    border: 1px solid rgba(255, 80, 110, 0.12);
+    box-shadow: 
+        0 0 10px var(--accent),
+        0 6px 30px rgba(47, 224, 168, 0.06);
+}
+
+
+.theme-lights {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, #ff3b5a, #2fe0a8, #ffd600);
+    filter: blur(8px);
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 10px;
+    opacity: 0.8;
+    animation: snow 10s linear infinite;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes snow {
+    0% { transform: translateY(0) translateX(0); }
+    100% { transform: translateY(110vh) translateX(10px); }
+}
