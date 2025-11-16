@@ -311,6 +311,31 @@
   }
 
   </style>
+
+  <!-- THEME OVERRIDE PANEL -->
+<div id="themeBox" class="theme-box" aria-hidden="true">
+  <button id="themeToggleBtn" class="theme-toggle" title="Theme options">.</button>
+  <div id="themePanel" class="theme-panel" role="dialog" aria-hidden="true">
+    <h3>Theme Override</h3>
+    <div class="theme-row">
+      <button class="theme-btn" data-theme="default">Default</button>
+      <button class="theme-btn" data-theme="christmas">Christmas</button>
+      <button class="theme-btn" data-theme="halloween">Halloween</button>
+      <button class="theme-btn" data-theme="thanksgiving">Thanksgiving</button>
+      <button class="theme-btn" data-theme="valentines">Valentines</button>
+      <button class="theme-btn" data-theme="easter">Easter</button>
+    </div>
+    <div class="theme-row">
+      <button id="resetTheme" class="theme-btn">Reset Auto</button>
+      <label class="music-toggle"><input type="checkbox" id="musicCheckbox"> Auto Music</label>
+    </div>
+  </div>
+</div>
+
+<!-- audio player used for theme music (controlled from theme.js) -->
+<audio id="themeAudio" preload="none"></audio>
+<!-- END THEME OVERRIDE PANEL -->
+  
 </head>
 <body>
   <!-- Navbar -->
@@ -485,5 +510,6 @@
 
 </body>
 </html>
+
 
 
