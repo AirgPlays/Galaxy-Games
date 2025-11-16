@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Galaxy Games - Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="Images/galaxy.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0a0a2a, #1a0033);
+      color: #fff;
+    }
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+.logo:hover {
+  color: #ff66ff; /* glow on hover */
+}
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(10, 10, 40, 0.8);
+      border-bottom: 2px solid #3a00a0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-size: 1.5em;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet, red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      animation: rainbow 10s linear infinite;
+    }
+    @keyframes rainbow {
+      from { background-position: 0%; }
+      to { background-position: 400%; }
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #00ffff;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(20, 0, 40, 0.95);
+      list-style: none;
+      padding: 10px 0;
+      border: 1px solid #3a00a0;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li {
+      padding: 5px 20px;
+    }
+    nav ul li ul li a {
+      color: #fff;
+    }
+    nav ul li ul li a:hover {
+      color: #ff66ff;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(30, 0, 60, 0.85);
+      border: 1px solid #3a00a0;
+      border-radius: 12px;
+      line-height: 1.6;
+    }
+    .contact-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff66ff;
+      text-shadow: 0 0 10px #3a00a0;
+    }
+    .contact-container h2 {
+      color: #00ffff;
+      margin-top: 20px;
+    }
+    .contact-container p {
+      color: #ddd;
+      margin: 10px 0;
+    }
+    .contact-container a {
+      color: #ff66ff;
+      text-decoration: none;
+    }
+    .contact-container a:hover {
+      color: #00ffff;
+    }
+    .contact-container ul {
+      margin-left: 20px;
+    }
+
+footer {
+      background: rgba(10, 10, 40, 0.95);
+      border-top: 2px solid #3a00a0;
+      padding: 30px;
+      position: relative;
+      text-align: center;
+    }
+
+    /* Footer Nav */
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 20px;
+    }
+    .footer-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+    .footer-nav ul li {
+      position: relative;
+    }
+    .footer-nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    .footer-nav ul li a:hover {
+      color: #00ffff;
+    }
+    .footer-nav ul li ul {
+      display: none;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      background: rgba(20, 0, 40, 0.95);
+      list-style: none;
+      padding: 10px 0;
+      border: 1px solid #3a00a0;
+    }
+    .footer-nav ul li:hover ul {
+      display: block;
+    }
+    .footer-nav ul li ul li {
+      padding: 5px 20px;
+    }
+    .footer-nav ul li ul li a {
+      color: #fff;
+    }
+    .footer-nav ul li ul li a:hover {
+      color: #ff66ff;
+    }
+
+    /* Tagline */
+    .tagline {
+      font-size: 0.95em;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    /* Credit Heart */
+    .credit {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      font-size: 0.9em;
+      color: #fff;
+    }
+    .credit svg {
+      fill: var(--crimson-red);
+      vertical-align: middle;
+    }
+    .credit a {
+      color: #ff66ff;
+      text-decoration: none;
+    }
+    .credit a:hover {
+      color: #00ffff;
+    }
+
+    :root {
+      --crimson-red: #ff4d88;
+    }
+
+    .credit {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0a0a2a, #1a0033);
+      color: #fff;
+      animation: heartbeat-scale 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+   .emergency-box {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    width: 300px;
+    max-width: 80%;
+    background: rgba(58,0,160,0.95);
+    color: #fff;
+    border-radius: 10px 0 0 10px;
+    padding: 15px 20px;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, width 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255,102,255,0.7);
+    overflow: hidden;
+    z-index: 9999;
+  }
+
+  .emergency-box.collapsed {
+    width: 40px;
+    padding: 15px 10px;
+  }
+
+  .emergency-box:hover {
+    box-shadow: 0 0 25px rgba(255,102,255,0.9);
+  }
+
+  .emergency-box p {
+    margin: 0;
+    font-size: 0.95em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 10px;
+  }
+
+  #toggleArrow {
+    font-weight: bold;
+    user-select: none;
+  }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="logo">🌌 Galaxy Games</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="Games.html">Games ▾</a>
+        <ul>
+          <li><a href="Action.html">Action</a></li>
+          <li><a href="Adventure.html">Adventure</a></li>
+          <li><a href="Puzzle.html">Puzzle</a></li>
+          <li><a href="Sports.html">Sports</a></li>
+          <li><a href="Arcade.html">Arcade</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="About.html">About Us ▾</a>
+        <ul>
+          <li><a href="Terms.html">Terms of Service</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <h1>Contact Galaxy Games</h1>
+
+    <p>Need to report a bug, broken game, or want to suggest a game or website improvement? You can reach us through the following methods:</p>
+
+    <h2>Email</h2>
+    <p>Send your messages to our admin email: <a href="mailto:admin@galaxygames.xyz">admin@galaxygames.xyz</a></p>
+    <ul>
+      <li>Report Bugs</li>
+      <li>Report Broken Games</li>
+      <li>Submit Game Suggestions</li>
+      <li>Website Feedback</li>
+    </ul>
+
+    <h2>Anonymous Google Form</h2>
+    <p>You can also submit bugs, game ideas, or feedback anonymously using our Google Form: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmDJ5WyY9Dbpj5XZRPA_P3hNoShjp12Wdhl7lmDuVdAuesdg/viewform?usp=dialog" target="_blank">Submit Here</a></p>
+
+    <h2>Rules</h2>
+    <ul>
+      <li>Do <strong>not</strong> request internet-based or console/PC games (e.g., Roblox, Modern Minecraft, Fortnite, Call of Duty).</li>
+      <li>Do <strong>not</strong> spam, harass, or abuse our contact methods. Violators will be blocked.</li>
+      <li>Be clear and concise to help us fix issues faster or consider your suggestions.</li>
+    </ul>
+
+    <p>We value your feedback and strive to keep Galaxy Games fun, safe, and accessible for everyone!</p>
+  </div>
+
+  <!-- Collapsible Schoology Button -->
+<div id="emergencyBox" class="emergency-box collapsed">
+  <span id="toggleArrow">➡</span>
+  <p>For Emergency's click <strong>CTRL + /</strong> to go to Schoology</p>
+</div>
+
+
+<script>
+  const emergencyBox = document.getElementById('emergencyBox');
+  const toggleArrow = document.getElementById('toggleArrow');
+  let isCollapsed = true;
+
+  // Toggle open/close on click
+  emergencyBox.addEventListener('click', () => {
+    isCollapsed = !isCollapsed;
+    if (isCollapsed) {
+      emergencyBox.classList.add('collapsed');
+      toggleArrow.textContent = '➡';
+    } else {
+      emergencyBox.classList.remove('collapsed');
+      toggleArrow.textContent = '⬅';
+    }
+  });
+
+  // Redirect on CTRL + /
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === '/') {
+      window.location.href = 'https://ccisd.schoology.com';
+    }
+  });
+
+  // Optional: Auto collapse after 5 seconds
+  setTimeout(() => {
+    if (!emergencyBox.classList.contains('collapsed')) {
+      emergencyBox.classList.add('collapsed');
+      toggleArrow.textContent = '➡';
+      isCollapsed = true;
+    }
+  }, 5000);
+</script>
+
+<footer>
+    <!-- Footer Nav -->
+    <div class="footer-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="Games.html">Games ▾</a>
+          <ul>
+            <li><a href="Action.html">Action</a></li>
+            <li><a href="Adventure.html">Adventure</a></li>
+            <li><a href="Puzzle.html">Puzzle</a></li>
+            <li><a href="Sports.html">Sports</a></li>
+            <li><a href="Arcade.html">Arcade</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="About.html">About Us ▾</a>
+          <ul>
+            <li><a href="Terms.html">Terms of Service</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Privacy.html">Privacy Policy</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tagline -->
+    <p class="tagline">
+      No downloads, no complex setups. Whether you're on a school Chromebook, a PC, or even a tablet, 
+      jumping into the fun is super simple. Get ready to explore tons of free online games designed 
+      specifically to beat boredom and work where others don't.
+    </p>
+
+    <!-- Heart + Credit -->
+    <p class="credit">
+      Coded with 
+      <svg id="heartbeat" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" 
+              fill-rule="evenodd" fill="var(--crimson-red)"/>
+      </svg> 
+      by <a href="https://discord.gg/QrN5EfFmPX">AirgPlays</a>
+    </p>
+  </footer>
+
+</body>
+</html>
